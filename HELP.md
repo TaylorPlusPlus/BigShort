@@ -1,7 +1,4 @@
-# Read Me First
-The following was discovered as part of building this project:
 
-* The original package name 'taylor.programming.boot-money-manager2' is invalid and this project uses 'taylor.programming.bootmoneymanager2' instead.
 
 # Getting Started
 
