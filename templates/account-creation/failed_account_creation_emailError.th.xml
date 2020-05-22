@@ -1,0 +1,22 @@
+<thlogic>
+<attr sel ="#headerId"
+      th:replace = "~{fragments/header :: headerFragment}"/>
+
+<attr sel="#login-form"
+      th:action = "@{__${T(taylor.programming.bootmoneymanager2.util.Mappings).REGISTER}__}"/>
+<attr sel="#enter-username"
+      th:text = "#{home.username}"/>
+<attr sel ="#enter-password"
+      th:text = "#{home.password}"/>
+<attr sel="#enter-firstNameText"
+      th:text = "#{home.firstName}"/>
+<attr sel="#enter-lastNameText"
+      th:text = "#{home.lastName}"/>
+<attr sel="#enter-emailText"
+      th:text = "#{home.email}"/>
+<attr sel ="#footerId"
+      th:replace="~{fragments/footer :: footerFragment}"/>
+
+<attr sel ="#backgroundImage"
+      th:src="@{~/images/backGroundImageV6.jpg}"/>
+</thlogic>

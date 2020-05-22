@@ -1,0 +1,12 @@
+<thlogic>
+    <attr sel ="#headerId"
+          th:replace = "~{fragments/headerSignedIn :: headerFragmentSignedIn}"/>
+
+    <attr sel ="#footerId"
+          th:replace="~{fragments/footer :: footerFragment}"/>
+
+    <attr sel ="#backgroundImage"
+          th:src="@{~/images/backGroundImageV6.jpg}"/>
+    <attr sel ="#p-welcome"
+          th:text = "|Welcome ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).USER_ACCOUNT_NAME}__}|"/>
+</thlogic>

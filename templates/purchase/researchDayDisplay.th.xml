@@ -1,0 +1,48 @@
+<thlogic>
+    <attr sel ="#headerId"
+          th:replace = "~{fragments/headerSignedIn :: headerFragmentSignedIn}"/>
+
+    <attr sel="#tradeThisStock"
+          th:action = "@{__${T(taylor.programming.bootmoneymanager2.util.Mappings).PURCHASE_PAGE}__}"
+          th:object = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK}__}"/>
+    <attr sel="#backToResearch"
+          th:action = "@{__${T(taylor.programming.bootmoneymanager2.util.Mappings).RESEARCH}__}"/>
+
+    <attr sel="#enter-username"
+          th:text = "#{home.username}"/>
+    <attr sel ="#enter-password"
+          th:text = "#{home.password}"/>
+    <attr sel="#enter-firstNameText"
+          th:text = "#{home.firstName}"/>
+    <attr sel="#enter-lastNameText"
+          th:text = "#{home.lastName}"/>
+    <attr sel="#enter-emailText"
+          th:text = "#{home.email}"/>
+    <attr sel="#stock-symbol"
+          th:text = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK_SYMBOL}__}"/>
+    <attr sel="#stock-symbol2"
+          th:text = "|Symbol: ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK_SYMBOL}__}|"/>
+    <attr sel="#stock-high"
+          th:text = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK_HIGH}__}"/>
+    <attr sel="#stock-low"
+          th:text = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK_LOW}__}"/>
+  <!-- <attr sel="#stock-open"
+          th:text = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK_OPEN}__}"/>
+  -->
+
+    <attr sel="#stock-open2"
+          th:text = "|Open: ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK_OPEN}__}|"/>
+
+    <attr sel="#stock-close"
+          th:text = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK_CLOSE}__}"/>
+
+    <attr sel="#stock-volume"
+          th:text = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK_VOLUME}__}"/>
+    <attr sel="#stock-information-title"
+          th:text = "|Stock Information|"/>
+    <attr sel ="#footerId"
+          th:replace="~{fragments/footer :: footerFragment}"/>
+
+    <attr sel ="#backgroundImage"
+          th:src="@{~/images/backGroundImageV6.jpg}"/>
+</thlogic>

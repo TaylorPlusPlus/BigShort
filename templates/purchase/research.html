@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/purchases.css">
+    <link rel="stylesheet" type="text/css" href="css/research.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+
+
+    <title>Big short</title>
+</head>
+<body>
+<header id = "headerId">
+
+</header>
+<!--
+<div id = "enter-research">
+    <form id = "login-form" action="/login"  method="post">
+        <div id = "displayTextDivResearch">
+            <p > Enter Symbol: </p>
+        </div>
+
+        <div id = "symbolInput">
+            <input id="symbol" name = "symbol" placeholder="Example: MSFT"/>
+        </div>
+
+        <div id = "submitDivResearch" align="center">
+            <input id ="submit" type="submit" value= "Submit"/>
+        </div>
+    </form>
+
+</div>
+-->
+<div id = "stock-lookup-title"/>
+
+<table class = "research-table">
+    <tr>
+        <th>Look Up By Symbol</th>
+        <th></th>
+    </tr>
+    <tr>
+        <form id = "research-table-form" action="/login"  method="post">
+            <td>
+                <input id="symbol-research-table" name = "symbol" placeholder="Example: MSFT"/>
+            </td>
+            <td>
+                <input id ="search-button" type="submit" value= "Search"/>
+            </td>
+        </form>
+    </tr>
+
+</table>
+<!--
+<div id = "imageDiv">
+    <img id = "backgroundImage"/>
+</div>
+-->
+<footer id = "footerId">
+
+</footer>
+</body>
+</html>

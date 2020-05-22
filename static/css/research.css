@@ -1,0 +1,214 @@
+
+.research-table {
+    border-collapse: collapse;
+    margin: 15px 0;
+
+    font-size: 1.3em;
+    margin: 15px 20px 15px 100px;
+
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    z-index: 10;
+    position:relative;
+
+}
+
+
+.research-table tr th {
+    background-color:#57BA98;
+    color:white;
+    text-align: left;
+    font-weight:bold;
+}
+
+.research-table th,
+.research-table td{
+    padding: 12px 15px;
+}
+
+.research-table tbody tr {
+    border-bottom: 1px solid #ddd
+}
+
+.research-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.research-table tbody tr:nth-of-type(odd) {
+    background-color: ghostwhite;
+}
+
+.research-table tbody tr:last-of-type{
+    border-bottom: 2px solid #57BA98;
+}
+
+.research-table tbody tr:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#search-button{
+    border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        background-color: #b44f46;
+        color:white;
+        width:85px;
+        font-weight:bold;
+        font-size:18px;
+}
+#search-button:hover{
+    background-color:#3B945E;
+}
+#chart{
+    width:405px;
+    height:400px;
+    position: relative;
+    float:left;
+    z-index:1;
+    background-color:ghostwhite;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    border-radius:5px 5px 5px 5px;
+    margin: 10px 0px 0px 30px
+}
+
+#symbol-research-table{
+    font-size:20px;
+    width: 155px;
+ }
+
+ #stock-lookup-title{
+     font-family: 'Audiowide';
+     font-size: 28px;
+     margin: 50px 0px 0px 100px;
+     position:relative;
+     z-index:1;
+ }
+
+#purchase-confirmation-title{
+    font-family: 'Audiowide';
+         font-size: 28px;
+         margin: 50px 0px 0px 100px;
+         position:relative;
+         z-index:1;
+}
+
+
+.research-table2 {
+    border-collapse: collapse;
+    margin: 15px 20px 15px 100px;
+    font-size: 1.2em;
+    min-width: 200px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    z-index: 10;
+    position:relative;
+    float:left;
+}
+
+
+.research-table2 tr th {
+    background-color:#65CCB8;
+    color:#182628;
+    text-align: left;
+    font-weight:bold;
+}
+
+.research-table2 th,
+.research-table2 td{
+    padding: 12px 15px;
+}
+.research-table2 th{
+    width: 50px;
+}
+
+.research-table2 tbody tr {
+    border-bottom: 1px solid #ddd
+}
+
+.research-table2 tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.research-table2 tbody tr:nth-of-type(odd) {
+    background-color: ghostwhite;
+
+}
+
+#submitPurchase, #submitShort{
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        background-color: #b44f46;
+        color:white;
+        width:85px;
+        font-weight:bold;
+        font-size: 18px;
+}
+#submitPurchase:hover{
+        background-color:#3B945E;
+}
+#submitShort:hover{
+        background-color:#3B945E;
+}
+
+#tradeStock{
+   border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        background-color: #b44f46;
+        color:white;
+        width:85px;
+        font-weight:bold;
+        font-size: 18px;
+}
+#tradeStock:hover{
+
+    background-color:#3B945E;
+}
+#backToReseach{
+    position:relative;
+}
+#backButton{
+       border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            background-color: #b44f46;
+            color:white;
+            width:85px;
+            font-weight:bold;
+            position:relative;
+
+            z-index:1;
+            font-size: 18px;
+}
+
+#backButton:hover{
+
+    background-color:#3B945E;
+}
+
+.research-table2 tbody tr:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#stock-information-title{
+ font-family: 'Audiowide';
+    font-size: 28px;
+    margin: 30px 0px 0px 0px;
+    position:relative;
+    margin: 50px 0px 0px 100px;
+    z-index:1;
+}
+#available-cash{
+    color:#46b46b;
+}
+#available-margin{
+    color:#b44f46;
+}
+
+#shareAmountField{
+    font-size:18px;
+}

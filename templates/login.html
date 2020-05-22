@@ -1,0 +1,72 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Big short</title>
+
+    <link rel="stylesheet" type="text/css" href="css/homestyle.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+
+</head>
+<body>
+
+<header id = "headerId">
+    <meta charset="UTF-8">
+    <div class="topnav">
+        <div id ="logoContainer">
+            <div id = "buttonContainer">
+                <a class="active" href="#home">Home</a>
+                <a href="news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                <a href="register">Register</a>
+            </div>
+            <div id = "logo">
+                big short.
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+<form id = "login-form" action="/login"  method="post">
+    <div id = "displayTextDiv">
+        Sign in:
+    </div>
+    <div th:if="${LOGIN_ERROR}" class="error"><div>Invalid username or password</div></div>
+    <div id = "formDiv">
+        <div id = "textAndFieldDiv2">
+
+                <div id = "usernameDiv2">
+                    <input id="username2" name = "username" placeholder="Username"/>
+                </div>
+
+                <div id = "passwordDiv2">
+                    <input id="password2" name = "password" type = "password" placeholder = "Password"/>
+                </div>
+
+                <div id = "submitDiv" align="center">
+                    <input id ="submit" type="submit" value= "Submit"/>
+                </div>
+
+        </div>
+    </div>
+
+
+</form>
+
+<div id = "imageDiv">
+    <img th:src="@{~/images/backGroundImageV6.jpg}"/>
+</div>
+
+
+
+<footer id = "footerId">
+
+
+</footer>
+</body>
+</html>

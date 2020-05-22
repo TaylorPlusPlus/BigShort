@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/purchases.css">
+    <link rel="stylesheet" type ="text/css" href="css/research.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <script src = "https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+    <title>Big short</title>
+</head>
+<body>
+<header id = "headerId">
+</header>
+
+
+
+<div id = "stock-information-title"/>
+
+<table class = "research-table2">
+    <tr>
+        <th>Symbol</th>
+        <td id = "stock-symbol"/>
+    </tr>
+
+    <tr>
+        <th>High</th>
+        <td id = "stock-high"/>
+    </tr>
+    <tr>
+        <th>Low</th>
+        <td id = "stock-low"/>
+    </tr>
+    <tr>
+        <th>Price</th>
+        <td id = "stock-close"/>
+    </tr>
+    <tr>
+        <th>Volume</th>
+        <td id = "stock-volume"/>
+    </tr>
+
+    <form id = "backToResearch">
+
+        <td>
+            <input id = "backButton" type = "submit" value ="Back"/>
+        </td>
+    </form>
+
+         <form id = "tradeThisStock" method = "post">
+
+        <input id = "sendSymbol" name = "symbol" type="hidden"/>
+        <input id = "sendClose"  name = "close" type = "hidden"/>
+        <input id = "sendLow"  name = "low" type = "hidden"/>
+        <input id = "sendHigh" name = "high" type = "hidden"/>
+
+        <input id = "sendDate" name = "date" type = "hidden"/>
+
+        <td>
+            <input id = "tradeStock" type="submit" value = "Trade"/>
+        </td>
+
+    </form>
+
+
+    </tr>
+
+
+</table>
+
+<canvas id="chart" width="400" height ="400"></canvas>
+<script th:inline="javascript">
+    var symbol = [[${STOCK_SYMBOL}]];
+    var APIprefix = [[${APIprefix}]];
+    var APIkey = [[${APIkey}]];
+    const xlabels = [];
+    const ylabels = [];
+    const xlabelsFlipped = [];
+    const ylabelsFlipped = [];
+
+        const api_url = APIprefix + symbol + '&' + APIkey;
+    chartIt();
+
+    async function chartIt(){
+        await getStockData();
+        const ctx = document.getElementById('chart');
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: xlabels,
+                datasets:   [
+                    {
+                        label: symbol,
+                        data: ylabels,
+
+                      backgroundColor: ['rgba(70, 180, 107, 0.2)'],
+                        borderColor: ['rgba(70, 180, 107, 1)'],
+                   /*
+                      backgroundColor: ['rgba(255, 99, 132, 0.2)'],
+                        borderColor: ['rgba(255, 99, 132, 1)'],
+
+                        */
+                        borderWidth: 1,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: false,
+                scales:{
+                xAxes:[{
+                    ticks:{
+                        reverse: true,
+                    }
+                }]
+              }
+            }
+          });
+       }
+
+
+    async function getStockData(){
+        const response = await fetch(api_url)
+        const data = await response.json();
+        var high = 0;
+        var low = 1000000000;
+        var volume = 0;
+        var firstIteration = true;
+        var date = "";
+        var timePairs = data["Time Series (Daily)"];
+
+
+       for(var prop in timePairs){
+            xlabels.push(prop);
+            ylabels.push(timePairs[prop]["4. close"]);
+            if(timePairs[prop]["1. open"] > high){
+                high = timePairs[prop]["1. open"];
+            }
+            if( timePairs[prop]["1. open"] < low){
+                low = timePairs[prop]["1. open"];
+            }
+            volume = timePairs[prop]["5. volume"];
+            if(firstIteration){
+                date = prop;
+                firstIteration = false;
+            }
+        }
+
+            document.getElementById("stock-high").innerHTML = high;
+            document.getElementById("stock-low").innerHTML = low;
+            document.getElementById("stock-volume").innerHTML = volume;
+            document.getElementById("stock-close").innerHTML = ylabels[0];
+
+            document.getElementById("sendSymbol").value = symbol;
+            document.getElementById("sendHigh").value = high;
+            document.getElementById("sendLow").value = low;
+            document.getElementById("sendClose").value = ylabels[0];
+            document.getElementById("sendDate").value = date;
+    }
+
+
+</script>
+
+<footer id = "footerId">
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<thlogic>
+    <attr sel ="#headerId"
+          th:replace = "~{fragments/headerSignedIn :: headerFragmentSignedIn}"/>
+
+    <attr sel="#research-table-form"
+          th:action = "@{__${T(taylor.programming.bootmoneymanager2.util.Mappings).RESEARCHDISPLAY}__}"
+          th:object = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK}__}"/>
+    <attr sel="#enter-username"
+          th:text = "#{home.username}"/>
+    <attr sel ="#enter-password"
+          th:text = "#{home.password}"/>
+    <attr sel ="#enter-account-number"
+          th:text = "#{home.accountNumber}"/>
+    <attr sel ="#footerId"
+          th:replace="~{fragments/footer :: footerFragment}"/>
+
+    <attr sel ="#backgroundImage"
+          th:src="@{~/images/backGroundImageV6.jpg}"/>
+    <attr sel ="#stock-lookup-title"
+          th:text="|Stock Lookup|"/>
+    <attr sel ="#p-welcome"
+          th:text = "|Welcome ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).USER_ACCOUNT_NAME}__}|"/>
+</thlogic>

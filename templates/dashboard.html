@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fugaz One' rel='stylesheet'>
+    <title>Big short</title>
+</head>
+<body>
+<header id = "headerId">
+
+</header>
+
+<div id = "account-table-title"/>
+
+<table class = "content-table">
+    <tr>
+        <th>Account Balance</th>
+        <th>Margin Available</th>
+        <th>Margin Dept</th>
+    </tr>
+    <tr>
+        <td id = "account-balance-value"/>
+        <td id = "margin-available"/>
+        <td id = "margin-debt"/>
+    </tr>
+
+</table>
+
+<div id = "stock-portfolio-title"/>
+
+<table class = "content-table2">
+
+
+    <tr>
+        <th>Symbol</th>
+        <th>Purchase Price</th>
+        <th>Share Quantity</th>
+        <th>Purchase Date</th>
+        <th></th>
+    </tr>
+
+    <tr id = "emptyRow">
+        <td id = "empty" colspan="5"/>
+    </tr>
+
+    <tr id = "infoRow">
+        <td id = "infoRow-symbol"></td>
+        <td id = "infoRow-purchase_price"></td>
+        <td id = "infoRow-numberOfShares"></td>
+        <td id = "infoRow-purchaseDate"></td>
+        <td>
+            <form id ="sellForm" action="sellStock" method="post">
+                <input id = "sellForm-investmentId" name = "investmentID" type = "hidden"/>
+                <input id = "sellForm-symbol" name = "symbol" type = "hidden"/>
+                <input id = "sellForm-purchase_price" name = "purchase_price" type = "hidden"/>
+                <input id = "sellForm-numberOfShares" name = "numberOfShares" type = "hidden"/>
+                <input id = "sellForm-purchaseDate" name = "purchaseDate" type = "hidden"/>
+                <input id = "sellConfirmSubmit" type = "submit" value = "Sell"/>
+            </form>
+        </td>
+    </tr>
+
+</table>
+
+
+<script th:inline="javascript">
+            var hasContent = [[${STOCK_PORTFOLIO_HAS_CONTENT}]];
+            if(hasContent == false){
+            document.getElementById("empty").innerHTML = "Your stock portfolio is currently empty.<br><br> Go to the Trade tab within the navigation bar at the top of the page to purchase stocks.";
+            }else{
+            document.getElementById("emptyRow").remove();
+            }
+        </script>
+<div id = "stock-portfolio-short-title"/>
+<table class = "content-table-short">
+    <tr>
+        <th>Symbol</th>
+        <th>Borrowed Price</th>
+        <th>Share Quantity</th>
+        <th>Borrow Date</th>
+        <th></th>
+    </tr>
+
+    <tr id = "emptyRowShort">
+        <td id = "emptyShort" colspan="5"/>
+    </tr>
+
+    <tr id = "infoRowShort">
+        <td id = infoRow-symbolShort/>
+        <td id = infoRow-purchase_priceShort/>
+        <td id = infoRow-numberOfSharesShort/>
+        <td id = infoRow-purchaseDateShort/>
+        <td>
+            <form id ="sellFormShort" action="sellStock" method="post">
+                <input id = "sellForm-investmentIdShort" name = "investmentID" type = "hidden"/>
+                <input id = "sellForm-symbolShort" name = "symbol" type = "hidden"/>
+                <input id = "sellForm-purchase_priceShort" name = "purchase_price" type = "hidden"/>
+                <input id = "sellForm-numberOfSharesShort"name = "numberOfShares" type = "hidden"/>
+                <input id = "sellForm-purchaseDateShort" name = "purchaseDate" type = "hidden"/>
+
+                <input id = "PayBackSubmit" type = "submit" value = "Return"/>
+            </form>
+        </td>
+    </tr>
+</table>
+
+<script th:inline="javascript">
+            var hasShortContent = [[${SHORT_PORTFOLIO_HAS_CONTENT}]];
+            if(hasShortContent == false){
+            document.getElementById("emptyShort").innerHTML = "Your shorted stock portfolio is currently empty.<br><br> Within the navigation bar at the top of the page, go to Trade to short stocks or About to<br>learn more information about shorting stocks.";
+            }else{
+            document.getElementById("emptyRowShort").remove();
+            }
+        </script>
+
+<footer id = "footerId">
+
+</footer>
+</body>
+</html>

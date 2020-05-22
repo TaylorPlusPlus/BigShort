@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/purchases.css">
+    <link rel="stylesheet" type="text/css" href="css/research.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+
+    <title>Big short</title>
+</head>
+<body>
+<header id = "headerId">
+
+</header>
+<div id = "purchase-confirmation-title"/>
+
+<table class = "research-table">
+    <tr>
+        <th>Available Cash</th>
+        <th>Available Margin</th>
+        <th>Price</th>
+        <th>Number of Shares</th>
+        <th>Pay With Cash</th>
+        <!--
+        <th>Pay With Margin</th>
+        -->
+        <th>Short This Stock</th>
+        -
+    </tr>
+
+    <tr>
+        <td id = "available-cash"/>
+        <td id = "available-margin"/>
+        <td id = "stock-price"/>
+
+
+        <form id = "purchase-form" action="/login"  method="post">
+
+                <input id = "passPrice" name = "close" type = "hidden"/>
+                <input th:value ="${STOCK_SYMBOL}" name = "symbol" type="hidden"/>
+                <input th:value ="${STOCK_CLOSE}" name = "close" type = "hidden"/>
+                <input th:value ="${STOCK_LOW}" name = "low" type = "hidden"/>
+                <input th:value ="${STOCK_HIGH}" name = "high" type = "hidden"/>
+                <input th:value ="${STOCK_OPEN}" name = "open" type = "hidden"/>
+                <input th:value ="${STOCK_DATE}" name = "date" type = "hidden"/>
+            <td>
+                <input id="shareAmountField" name = "shareAmount" type = "number" placeholder="Number Of Shares"/>
+            </td>
+
+            <td>
+                <input id ="submitPurchase" type="submit" value= "Cash" name="action"/>
+            </td>
+<!--
+            <td>
+                <input id ="submitMargin" type="submit" value= "Margin" name="action"/>
+            </td>
+-->
+            <td>
+                <input id ="submitShort" type="submit" value= "Short" name="action"/>
+            </td>
+
+        </form>
+
+
+
+
+
+    </tr>
+</table>
+
+<!--
+<div id = "purchaseDiv">
+    <form id = "purchase-form" action="/login"  method="post">
+        <div id = "displayTextDivResearch">
+
+
+            <div id = "stock-price"/>
+            <div id = "available-cash"/>
+        </div>
+
+        <div id = "shareAmount">
+            <input id = "passPrice" name = "close" type = "hidden"/>
+            <input th:value ="${STOCK_SYMBOL}" name = "symbol" type="hidden"/>
+            <input th:value ="${STOCK_CLOSE}" name = "close" type = "hidden"/>
+            <input th:value ="${STOCK_LOW}" name = "low" type = "hidden"/>
+            <input th:value ="${STOCK_HIGH}" name = "high" type = "hidden"/>
+            <input th:value ="${STOCK_OPEN}" name = "open" type = "hidden"/>
+            <input th:value ="${STOCK_DATE}" name = "date" type = "hidden"/>
+            <input id="shareAmountField" name = "numberOfShares" type = "number" placeholder="Number Of Shares"/>
+        </div>
+
+        <div id = "submitDivResearch" align="center">
+            <input id ="submit" type="submit" value= "Submit"/>
+        </div>
+    </form>
+</div>
+
+-->
+<!--
+<div id = "imageDiv">
+    <img id = "backgroundImage"/>
+</div>
+-->
+<footer id = "footerId">
+
+</footer>
+</body>
+</html>

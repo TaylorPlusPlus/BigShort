@@ -1,0 +1,77 @@
+#about-title, #howTo-title{
+    font-family: 'Audiowide';
+        font-size: 34px;
+        margin: 50px 0px 0px 120px;
+        position:relative;
+        z-index:1;
+}
+#about-content, #howTo-content{
+        font-family: Georgia;
+        font-size: 22px;
+        width:500px;
+        margin: 25px 0px 0px 240px;
+        position:relative;
+        z-index:1;
+}
+
+#homePageInformation-title , #tradePageInformation-title{
+    font-family: 'Audiowide';
+            font-size: 32px;
+            margin: 50px 0px 0px 240px;
+            position:relative;
+            z-index:1;
+}
+
+#accountInformation-title, #stockPortfolio-title, #shortedStockPortfolio-title, #stockLookup-title,
+#stockInformation-title, #makeAPurchase-title{
+    font-family: 'Audiowide';
+    font-size: 30px;
+    margin: 50px 0px 0px 360px;
+    position:relative;
+    z-index:1;
+}
+
+#accountBalance-title, #marginAvailable-title, #trade-title, #payWithCash-title, #shortThisStock-title{
+    font-family: 'Audiowide';
+    font-size: 28px;
+    margin: 50px 0px 0px 480px;
+    position:relative;
+    z-index:1;
+}
+
+#accountBalance-content, #marginAvailable-content, #trade-content, #payWithCash-content, #shortThisStock-content{
+    font-family: Georgia;
+    font-size: 22px;
+    width:500px;
+    margin: 25px 0px 0px 600px;
+    position:relative;
+    z-index:1;
+}
+
+#stockPortfolio-content, #shortedStockPortfolio-content, #stockLookup-content, #stockInformation-content,
+    #makeAPurchase-content{
+    font-family: Georgia;
+    font-size: 22px;
+    width:500px;
+    margin: 25px 0px 0px 480px;
+    position:relative;
+    z-index:1;
+}
+
+#disclaimer-title{
+ font-family: 'Audiowide';
+        font-size: 36px;
+        color:red;
+        margin: 50px 0px 0px 120px;
+        position:relative;
+        z-index:1;
+}
+
+#disclaimer-content{
+        font-family: Georgia;
+                font-size: 22px;
+                width:500px;
+                margin: 25px 0px 125px 240px;
+                position:relative;
+                z-index:1;
+}

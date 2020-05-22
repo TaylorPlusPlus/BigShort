@@ -1,0 +1,96 @@
+<thlogic>
+<attr sel ="#headerId"
+      th:replace = "~{fragments/headerSignedIn :: headerFragmentSignedIn}"/>
+
+<attr sel="#login-form"
+      th:action = "@{__${T(taylor.programming.bootmoneymanager2.util.Mappings).MM_HOME}__}"/>
+    <attr sel="#sellForm"
+          th:action = "@{__${T(taylor.programming.bootmoneymanager2.util.Mappings).SELL_STOCK}__}"
+          th:object = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).SELL_STOCK}__}"/>
+    <attr sel="#sellFormShort"
+          th:action = "@{__${T(taylor.programming.bootmoneymanager2.util.Mappings).RETURN_STOCK}__}"
+          th:object = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).SELL_STOCK}__}"/>
+
+    <attr sel="#enter-username"
+      th:text = "#{home.username}"/>
+<attr sel ="#enter-password"
+      th:text = "#{home.password}"/>
+<attr sel ="#enter-account-number"
+      th:text = "#{home.accountNumber}"/>
+<attr sel ="#footerId"
+      th:replace="~{fragments/footer :: footerFragment}"/>
+    <attr sel = "#footerIdFull"
+          th:replace ="~{fragments/footer :: footerFragmentFull}"/>
+
+<attr sel ="#backgroundImage"
+      th:src="@{~/images/backGroundImageV6.jpg}"/>
+<attr sel ="#p-welcome-dashboard"
+      th:text = "|Welcome, ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).FIRST_NAME}__}|"/>
+    <attr sel = "#account-table-title"
+      th:text = "|Account Information|"/>
+    <attr sel = "#stock-portfolio-title"
+          th:text = "|Stock Portfolio|"/>
+    <attr sel = "#stock-portfolio-short-title"
+          th:text = "|Shorted Stock Portfolio|"/>
+    <attr sel = "#margin-available"
+      th:text = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).MARGIN_BALANCE}__}"/>
+<attr sel = "#margin-debt"
+      th:text = "|$0.00|"/>
+<attr sel = "#account-balance-value"
+      th:text = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).ACCOUNT_BALANCE}__}"/>
+
+    <!-- DECOUPLING THE LOGIC -->
+
+    <attr sel = "#infoRow"
+
+    th:each="stock: ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).STOCK_ARRAY}__}"/>
+
+    <attr sel = "#infoRow-symbol"
+          th:text = "${stock.symbol}"/>
+    <attr sel = "#infoRow-purchase_price"
+          th:text = "${stock.purchase_price}"/>
+    <attr sel = "#infoRow-numberOfShares"
+          th:text = "${stock.numberOfShares}"/>
+    <attr sel = "#infoRow-purchaseDate"
+          th:text = "${stock.purchaseDate}"/>
+
+    <!-- SELL FORM -->
+    <attr sel = "#sellForm-investmentId"
+          th:value = "${stock.investmentID}"/>
+    <attr sel = "#sellForm-symbol"
+          th:value = "${stock.symbol}"/>
+    <attr sel = "#sellForm-purchase_price"
+          th:value = "${stock.purchase_price}"/>
+    <attr sel = "#sellForm-numberOfShares"
+          th:value = "${stock.numberOfShares}"/>
+    <attr sel = "#sellForm-purchaseDate"
+          th:value = "${stock.purchaseDate}"/>
+
+
+    <attr sel = "#infoRowShort"
+          th:each="stock: ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).SHORT_ARRAY}__}"/>
+
+    <attr sel = "#infoRow-symbolShort"
+          th:text = "${stock.symbol}"/>
+    <attr sel = "#infoRow-purchase_priceShort"
+          th:text = "${stock.purchase_price}"/>
+    <attr sel = "#infoRow-numberOfSharesShort"
+          th:text = "${stock.numberOfShares}"/>
+    <attr sel = "#infoRow-purchaseDateShort"
+          th:text = "${stock.purchaseDate}"/>
+
+    <!-- SELL FORM SHORT -->
+    <attr sel = "#sellForm-investmentIdShort"
+          th:value = "${stock.investmentID}"/>
+    <attr sel = "#sellForm-symbolShort"
+          th:value = "${stock.symbol}"/>
+    <attr sel = "#sellForm-purchase_priceShort"
+          th:value = "${stock.purchase_price}"/>
+    <attr sel = "#sellForm-numberOfSharesShort"
+          th:value = "${stock.numberOfShares}"/>
+    <attr sel = "#sellForm-purchaseDateShort"
+          th:value = "${stock.purchaseDate}"/>
+
+
+
+</thlogic>

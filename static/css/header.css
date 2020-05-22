@@ -1,0 +1,108 @@
+
+.topnav {
+  background-color:#182628;
+  overflow: hidden;
+  height:100px;
+  position:relative;
+    font-family:'Audiowide';
+}
+
+
+.topnav a {
+  float: left;
+  color:#F2F2F2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 27px;
+
+}
+
+
+.topnav a:hover {
+  background-color: #57BA98;
+  color: #182628;
+}
+
+
+.topnav a.active {
+  background-color:#65CCB8;
+  background-color:#3B9453;
+  background-color:#57BA98;
+  color: black;
+}
+#borderContainer{
+    position:relative;
+    height:100px;
+    width:100%;
+
+}
+#logoContainer {
+     position: absolute;
+     height: 100px;
+     width:85%;
+
+ }
+#buttonContainer {
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+
+}
+#logo {
+    position: relative;
+    font-size:60px;
+    padding: 0xp;
+    color:white;
+    margin: 0px 0px 0px 0px;
+    float:right;
+    margin: 30px 10px 0px 0px;
+    font-family: Georgia;
+
+}
+
+@media only screen and (max-width: 950px) {
+	#extraButtonContainerVoid {
+	    width:0px !important;
+     height: 100px;
+    float: right;
+	}
+#imageDiv2 img {
+	height: 50%;
+	Width: 50%;
+	float: right;
+	margin-top:50px;
+}
+}
+
+#imageDiv2{
+position: relative;
+    padding: 0xp;
+    color:white;
+    float:right;
+
+}
+
+@media only screen and (max-width: 760px) {
+     	#logo {
+     	    font-size:0px !important;
+     	}
+}
+#extraButtonContainer {
+
+    float:right;
+    margin: 41px 0px 0px 0px;
+}
+#extraButtonContainer a {
+    float:right;
+}
+#extraButtonContainerVoid {
+    width: 233.47px;
+    height: 100px;
+    float:right;
+}
+
+#header-fragmentSignedIn{
+    position: relative;
+    z-index:1;
+}

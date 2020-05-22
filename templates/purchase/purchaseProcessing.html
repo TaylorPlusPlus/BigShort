@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/purchases.css">
+
+    <title>Big short</title>
+</head>
+<body>
+<header id = "headerId">
+
+</header>
+<!--
+<div id = "enter-research">
+
+    <p id = "stock-symbol"/><br>
+    <p id = "stock-open"/><br>
+    <p id = "stock-close"/><br>
+    <p id = "stock-high"/><br>
+    <p id = "stock-low"/><br>
+    <p id = "stock-volume"/><br>
+    <form id = "tradeThisStock">
+        <div id = "tradeStockButton">
+            <input id = "tradeStock" type="submit" value = "Trade This Stock"/>
+        </div>
+
+    </form>
+
+    <form id = "backToResearch">
+        <div id = "backToResearchButton">
+            <input id = "backButton" type = "submit" value ="Back"/>
+        </div>
+    </form>
+</div>
+-->
+
+<div id = "purchaseDiv">
+    <form id = "purchase-form" action="/login"  method="post">
+        <div id = "displayTextDivResearch">
+            <div id = "stock-symbol2"/>
+            <div id = "stock-price"/>
+            <div id = "available-cash"/>
+        </div>
+
+        <div id = "shareAmount">
+            <input id="shareAmountField" name = "amountToPurchase" type = "number" placeholder="Number Of Shares"/>
+        </div>
+
+        <div id = "submitDivResearch" align="center">
+            <input id ="submit" type="submit" value= "Submit"/>
+        </div>
+    </form>
+</div>
+
+
+<div id = "imageDiv">
+    <img id = "backgroundImage"/>
+</div>
+
+<footer id = "footerId">
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<thlogic>
+    <attr sel ="#headerId"
+          th:replace = "~{fragments/headerSignedIn :: headerFragmentSignedIn}"/>
+    <attr sel ="#footerId"
+          th:replace="~{fragments/footer :: footerFragment}"/>
+    <attr sel = "#footerIdFull"
+          th:replace ="~{fragments/footer :: footerFragmentFull}"/>
+    <attr sel = "#about-title"
+          th:text = "|About:|"/>
+    <attr sel = "#about-content"
+          th:text = "|Big short is stock trading application that designed to allow users to
+	practice trading stocks without having to risk any real money. The stock
+	pricing data used is based off each stock most recent closing price.
+	Stock closing data is updated at approximately 4:30 pm EST each day.|"/>
+    <attr sel = "#howTo-title"
+          th:text = "|How To:|"/>
+    <attr sel = "#howTo-content"
+          th:text = "|Every account begins with $1,000,000 dollars. As trades are made, the account
+	balance may change. Your current account balance can be viewed in the
+	home section. More information on the home page can be found below.|"/>
+    <attr sel = "#homePageInformation-title"
+          th:text = "|Home Page Information:|"/>
+    <attr sel = "#accountInformation-title"
+          th:text = "|Account Information:|"/>
+    <attr sel = "#accountBalance-title"
+          th:text = "|Account Balance:|"/>
+    <attr sel = "#accountBalance-content"
+          th:text = "|The account balance value represents how much money you
+				have available to purchase assets or pay off debt.|"/>
+    <attr sel = "#marginAvailable-title"
+          th:text = "|Margin Available:|"/>
+    <attr sel = "#marginAvailable-content"
+          th:text = "|The margin available value represents the amount available
+				to barrow. Barrowing is essential for processes such as
+				short selling. Each account begins with $1,000,000 in
+				available margin. More information on short selling can be
+				found in an upcoming section on this page. |"/>
+    <attr sel = "#stockPortfolio-title"
+          th:text = "|Stock Portfolio:|"/>
+    <attr sel = "#stockPortfolio-content"
+          th:text = "|The table within the stock portfolio section of the home page contains
+			all the stocks you have purchased. The Purchase Date represents
+			the most recent close to when you made the purchase. For example, if
+			a stock is purchase on Saturday at 1:00 EST, the purchase date will
+			represent Friday, since the last close was Friday at 4:00pm EST. Stocks
+			are sold from the stock portfolio as well. The Sell button will sell
+			the stock within the same row as the sell button you have selected,
+			however, you will first be taken to a sell confirmation page.|"/>
+    <attr sel = "#shortedStockPortfolio-title"
+          th:text = "|Shorted Stock Portfolio:|"/>
+    <attr sel = "#shortedStockPortfolio-content"
+          th:text = "|The table within the stock portfolio section of the home page contains
+			all the stocks you have purchased. The Purchase Date represents
+			the most recent close to when you made the purchase. For example, if
+			a stock is purchase on Saturday at 1:00pm EST, the purchase date will
+			represent Friday, since the last close was Friday at 4:00pm EST. Stocks
+			are sold from the stock portfolio as well. The Sell button will sell
+			the stock within the same row as the sell button you have selected,
+			however, you will first be taken to a sale confirmation page.|"/>
+    <attr sel = "#tradePageInformation-title"
+          th:text = "|Trade Page Information:|"/>
+    <attr sel = "#stockLookup-title"
+          th:text = "|Stock Lookup:|"/>
+    <attr sel = "#stockLookup-content"
+          th:text = "|The stock lookup allows users to research a stock. This process is
+			a prerequisite for all stock purchases. To research a stock,
+			you must know the stocks symbol. Big short does have stock symbol lookup
+			technology, so if you do not know a stocks symbol, you will have to use
+			outside resources to find it.|"/>
+    <attr sel = "#stockInformation-title"
+          th:text = "|Stock Lookup:|"/>
+    <attr sel = "#stockInformation-content"
+          th:text = "|This section displays a stocks high, low, and graphical data based on
+			the researched stocks price over the last 100 days. The volume and
+			price is based on the most recent close price and volume.|"/>
+    <attr sel = "#trade-title"
+          th:text = "|Trade:|"/>
+    <attr sel = "#trade-content"
+          th:text = "|This button allows for you to trade this stock. See the
+				Make a Purchase section below for more information about
+				trading stocks.|"/>
+    <attr sel = "#makeAPurchase-title"
+          th:text = "|Make a Purchase:|"/>
+    <attr sel = "#makeAPurchase-content"
+          th:text = "|Table in this section displays the amount of cash you have available,
+			the margin you have available, and the current price of the stock that
+			has been selected. The number of shares represents the number of shares
+			you would like to purchase.|"/>
+    <attr sel = "#payWithCash-title"
+          th:text = "|Pay with Cash:|"/>
+    <attr sel = "#payWithCash-content"
+          th:text = "|If this option is selected, your account balance/available cash
+				will be reduced by the total price of the purchase and the stocks
+				will be added to your stock portfolio.|"/>
+    <attr sel = "#shortThisStock-title"
+          th:text = "|Short This Stock:|"/>
+    <attr sel = "#shortThisStock-content"
+          th:text = "|If the short option is selected, and the available margin is greater
+				than the total price of the purchase, the stock will be shorted.
+				When a stock is shorted, the stock will be added to both your stock
+				portfolio and your shorted stock portfolio. The idea is to sell the
+				stock that has been added to your stock portfolio immediately and
+				return the stock in the shorted stock portfolio later.
+				The interest rate on an asset purchased with margin is 9% annually.
+				Shorting a stock, a good option if you expect a stock to go down in
+				price. For example, say 1 share of stock EXAMPLE is $100, and you expect
+				to go down. You can short this stock, which gives you 1 share of the stock,
+				and 1 share of the stock in debt. If you sell the stock right away,
+				you would have $100 and owe 1 share of the stock. If the stock goes to $70,
+				you can buy 1 share at that price and return it, leaving you with $30 in
+				profit (not including any interest payments). This option is only recommended
+				if there is certainty the stock will decrease in price, since a lot of money can
+				be lost if the stock’s price increases. |"/>
+
+    <attr sel = "#disclaimer-title"
+          th:text = "|Disclaimer:|"/>
+    <attr sel = "#disclaimer-content"
+          th:text = "|Success using bigshort.org does not guarantee success using real money in
+	the stock markets. We recommended speaking to a professional financial advisor
+	before making any financial investments regardless of success on bigshort.org.|"/>
+
+
+</thlogic>

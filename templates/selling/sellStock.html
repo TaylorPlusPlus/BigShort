@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+
+
+    <title>Big short</title>
+</head>
+<body>
+<header id = "headerId">
+
+</header>
+
+<div id = "sell-stock-title"/>
+<!--
+<div id = "imageDiv">
+    <img id = "backgroundImage"/>
+</div>
+-->
+<table class = "content-table">
+    <tr>
+        <th>Symbol</th>
+        <th>Purchase Price</th>
+        <th>Share Quantity</th>
+        <th>Current Price</th>
+        <th>Total gains and loses</th>
+        <th>Confirm Sale</th>
+
+    </tr>
+    <tr>
+        <td th:text = "${STOCK_SYMBOL}"/>
+        <td th:text = "${STOCK_PRICE}"/>
+        <td th:text = "${SHARE_AMOUNT}"/>
+        <td th:text = "${CURRENT_PRICE}"/>
+        <td id = "gains" th:text = "${GAINS_STRING}"/>
+
+        <script th:inline="javascript">
+            var TOTAL_GAINS_AND_LOSES = [[${TOTAL_GAINS_AND_LOSES}]];
+            if(TOTAL_GAINS_AND_LOSES >= 0)
+            document.getElementById("gains").style.color = "#3B945E";
+            else
+            document.getElementById("gains").style.color = "#b44f46";
+        </script>
+        <td>
+            <form id = confirmSaleForm action = "confirmSale" method = "post">
+                <input th:value = "${STOCK_ID}" name = "investmentID" type = "hidden"/>
+                <input th:value = "${STOCK_SYMBOL}" name = "symbol" type = "hidden"/>
+                <input th:value = "${STOCK_PRICE}" name = "purchase_price" type = "hidden"/>
+                <input th:value = "${SHARE_AMOUNT}" name = "numberOfShares" type = "hidden"/>
+                <input th:value = "${CURRENT_PRICE}" name = "currentPrice" type = "hidden"/>
+                <input id = "sellConfirmSubmit" type = "submit" value = "Sell"/>
+            </form>
+        </td>
+    </tr>
+
+</table>
+<footer id = "footerId">
+
+</footer>
+</body>
+</html>

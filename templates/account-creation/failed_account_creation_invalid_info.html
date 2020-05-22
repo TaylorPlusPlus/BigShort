@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/homestyle.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/failures.css">
+
+    <title>Big short</title>
+</head>
+<body>
+<div id = "screenDiv">
+<header id = "headerId">
+
+</header>
+<form id = "login-form"
+      action="play2" method="post">
+    <div id = "displayTextDiv">
+
+        Create an Account:
+    </div>
+    <div id = "formDiv">
+        <div id = "textAndFieldDiv">
+            <!--
+            <div id = "textDiv">
+
+                <div id = "enter-usernameDiv">
+                    <label id="enter-username" for = "username">Enter your Username</label>
+                </div>
+
+                <div id = "enter-passwordDiv">
+                    <label id="enter-password" for = "password">Enter you Password</label>
+                </div>
+
+                <div id = "enter-firstNameDiv">
+                    <label id="enter-firstNameText" for = "firstName">Enter you First Name</label>
+                </div>
+                <div id = "enter-lastNameDiv">
+                    <label id="enter-lastNameText" for = "lastName">Enter you Last Name</label>
+                </div>
+
+                <div id = "enter-emailDiv">
+                    <label id="enter-emailText" for = "email">Enter you Password</label>
+                </div>
+
+
+
+            </div>
+            -->
+          <!--  <div id = "fieldDiv"> -->
+                <div id = "usernameDivFailed2" align="center">
+                    <input id="username" name = "username" placeholder="Username"/>
+                </div>
+                <div id = "passwordDivFailed" align="center">
+                    <input id="passwordFailed" name = "password" placeholder="Password"/>
+                </div>
+
+                <div id = "firstNameDivFailed" align="center">
+                    <input id="firstNameFailed" name = "firstName" placeholder="First Name"/>
+                </div>
+
+                <div id = "lastNameDivFailed" align="center">
+                    <input id="lastNameFailed" name = "lastName" placeholder="Last Name"/>
+                </div>
+
+                <div id = "emailDivFailed" align="center">
+                    <input id="emailFailed" name = "email"placeholder="Email Address"/>
+                </div>
+                <div id = "submitDivFailed" align="center">
+                    <input id ="submit" type="submit" value= "Submit"/>
+                </div>
+           <!-- </div> -->
+
+        </div>
+        <div id = "invalidFieldInfo">Invalid information<br><br>Check input requirements</div>
+
+        <div id ="inputRequirements">
+            Input requirements:<br>
+            Special characters are not supported for all input fields<br>
+            Username: 3-20 character length, contains 1 or less underscores<br>
+            Password: 11-50 character length, contains 1 or less underscores<br>
+            First & Last Name: 2-24 character length<br>
+            Email: must be valid email<br>
+        </div>
+    </div>
+
+
+
+</form>
+
+
+
+
+<div id = "imageDiv">
+    <img id = "backgroundImage"/>
+</div>
+
+</div>
+<footer id = "footerId">
+
+</footer>
+</body>
+</html>

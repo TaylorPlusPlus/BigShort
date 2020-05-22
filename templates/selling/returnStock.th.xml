@@ -1,0 +1,29 @@
+<thlogic>
+    <attr sel ="#headerId"
+          th:replace = "~{fragments/headerSignedIn :: headerFragmentSignedIn}"/>
+
+    <attr sel="#login-form"
+          th:action = "@{__${T(taylor.programming.bootmoneymanager2.util.Mappings).MM_HOME}__}"/>
+    <attr sel="#confirmSaleForm"
+          th:action = "@{__${T(taylor.programming.bootmoneymanager2.util.Mappings).CONFIRM_RETURN}__}"
+          th:object = "${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).SELL_STOCK}__}"/>
+
+    <attr sel="#enter-username"
+          th:text = "#{home.username}"/>
+    <attr sel="#return-stock-title"
+          th:text = "|Stock Return Confirmation|"/>
+    <attr sel ="#enter-password"
+          th:text = "#{home.password}"/>
+    <attr sel ="#enter-account-number"
+          th:text = "#{home.accountNumber}"/>
+    <attr sel ="#footerId"
+          th:replace="~{fragments/footer :: footerFragment}"/>
+
+    <attr sel ="#backgroundImage"
+          th:src="@{~/images/backGroundImageV6.jpg}"/>
+    <attr sel ="#p-welcome"
+          th:text = "|Welcome ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).USER_ACCOUNT_NAME}__}
+          Account Balance: ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).ACCOUNT_BALANCE}__}
+           First Name: ${__${T(taylor.programming.bootmoneymanager2.util.AttributeNames).FIRST_NAME}__}|"/>
+
+</thlogic>

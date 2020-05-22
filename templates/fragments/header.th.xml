@@ -1,0 +1,6 @@
+<thlogic>
+    <attr sel = "#header-fragment"
+        th:fragment = "headerFragment"/>
+    <attr sel ="#backgroundImage"
+          th:src="@{~/images/bigshortlogoV4.png}"/>
+</thlogic>

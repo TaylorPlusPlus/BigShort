@@ -1,0 +1,181 @@
+
+.content-table {
+     border-collapse: collapse;
+     margin: 15px 0px 15px 100px;
+     font-size: 1.3em;
+     min-width: 698px;
+     border-radius: 5px 5px 0 0;
+     overflow: hidden;
+     box-shadow: 0 0 20px rgba(0,0,0,0.15);
+     z-index: 10;
+     position:relative;
+
+ }
+
+ .content-table tr th {
+     background-color:#65CCB8;
+     background-color:#3B9453;
+     background-color:#57BA98;
+     color:#182628;
+     text-align: left;
+     font-weight:bold;
+ }
+
+ .content-table th,
+ .content-table td{
+     padding: 12px 15px;
+ }
+
+ .content-table tbody tr {
+     border-bottom: 1px solid #ddd
+ }
+
+ .content-table tbody tr:nth-of-type(even) {
+     background-color: #f3f3f3;
+ }
+ .content-table tbody tr:nth-of-type(odd) {
+     background-color: ghostwhite;
+ }
+
+ .content-table tbody tr:last-of-type{
+     border-bottom: 2px solid #57BA98;
+ }
+
+ .content-table tbody tr:hover {
+   background-color: #ddd;
+   color: black;
+ }
+
+ .content-table2 {
+     border-collapse: collapse;
+     margin: 15px 0px 0px 100px;
+     font-size: 1.3em;
+     min-width: 698px;
+     border-radius: 5px 5px 0 0;
+     overflow: hidden;
+     box-shadow: 0 0 20px rgba(0,0,0,0.15);
+     z-index: 1;
+     position:relative;
+     padding-bottom: 4rem;
+ }
+
+ #empty, #emptyShort{
+    font-size: 18px;
+ }
+
+ .content-table2 tr th {
+
+     background-color:#65CCB8;
+    background-color:#3B9453;
+    background-color:#57BA98;
+     color:#182628;
+     text-align: left;
+     font-weight:bold;
+ }
+
+ .content-table2 th,
+ .content-table2 td{
+     padding: 12px 15px;
+ }
+
+ .content-table2 tbody tr {
+     border-bottom: 1px solid #ddd;
+ }
+
+ .content-table2 tbody tr:nth-of-type(even) {
+     background-color: #f3f3f3;
+
+ }
+ .content-table2 tbody tr:nth-of-type(odd) {
+     background-color: ghostwhite;
+ }
+
+ .content-table2 tbody tr:last-of-type{
+     border-bottom: 2px solid #57BA98;
+ }
+
+ .content-table2 tbody tr:hover {
+   background-color: #ddd;
+   color: black;
+ }
+
+
+
+#sellConfirmSubmit, #PayBackSubmit{
+    border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        background-color: #b44f46;
+        color:white;
+        width:80px;
+        font-weight:bold;
+        font-size:18px;
+}
+
+#sellConfirmSubmit:hover{
+    background-color:#3B945E;
+}
+#PayBackSubmit:hover{
+    background-color:#3B945E;
+}
+#account-balance-value{
+    color:#46b46b;
+    color:#3B945E;
+}
+
+#margin-available{
+    color:#46b46b;
+    color:#3B945E;
+}
+
+#margin-debt{
+    color:#b44f46;
+}
+
+
+.content-table-short {
+     border-collapse: collapse;
+     margin: 15px 0px 95px 100px;
+     font-size: 1.3em;
+     min-width: 698px;
+     border-radius: 5px 5px 0 0;
+     overflow: hidden;
+     box-shadow: 0 0 20px rgba(0,0,0,0.15);
+     z-index: 1;
+     position:relative;
+
+ }
+
+ .content-table-short tr th {
+     background-color:#65CCB8;
+     background-color:#3B9453;
+     background-color:#57BA98;
+     color:#182628;
+     text-align: left;
+     font-weight:bold;
+ }
+
+ .content-table-short th,
+ .content-table-short td{
+     padding: 12px 15px;
+ }
+
+ .content-table-short tbody tr {
+     border-bottom: 1px solid #ddd
+ }
+
+ .content-table-short tbody tr:nth-of-type(even) {
+     background-color: #f3f3f3;
+ }
+ .content-table-short tbody tr:nth-of-type(odd) {
+     background-color: ghostwhite;
+ }
+
+ .content-table-short tbody tr:last-of-type{
+     border-bottom: 2px solid #57BA98;
+ }
+
+ .content-table-short tbody tr:hover {
+   background-color: #ddd;
+   color: black;
+ }

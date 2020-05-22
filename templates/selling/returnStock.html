@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+
+
+    <title>Big short</title>
+</head>
+<body>
+<header id = "headerId">
+
+</header>
+
+<div id = "return-stock-title"/>
+<!--
+<div id = "imageDiv">
+    <img id = "backgroundImage"/>
+</div>
+-->
+<table class = "content-table">
+    <tr>
+        <th>Symbol</th>
+        <th>Purchase Price</th>
+        <th>Share Quantity</th>
+        <th>Number Of Days Borrowed</th>
+        <th>Interest Owed</th>
+        <th>Confirm Return</th>
+
+    </tr>
+    <tr>
+        <td th:text = "${STOCK_SYMBOL}"/>
+        <td th:text = "${STOCK_PRICE}"/>
+        <td th:text = "${SHARE_AMOUNT}"/>
+        <td th:text = "${DAYS_BORROWED}"/>
+        <td th:text = "${INTEREST_OWED_STRING}"/>
+
+        <td>
+            <form id = confirmSaleForm action = "confirmSale" method = "post">
+                <input th:value = "${STOCK_SYMBOL}" name = "symbol" type = "hidden"/>
+                <input th:value = "${STOCK_PRICE}" name = "purchase_price" type = "hidden"/>
+                <input th:value = "${SHARE_AMOUNT}" name = "numberOfShares" type = "hidden"/>
+
+
+                <!-- PARAMETER -->
+                <input th:value = "${DAYS_BORROWED}" name = "daysBorrowed" type = "hidden"/>
+                <input th:value = "${INTEREST_OWED}" name = "interestOwed" type = "hidden"/>
+                <input id = "sellConfirmSubmit" type = "submit" value = "Return"/>
+            </form>
+        </td>
+    </tr>
+
+</table>
+<footer id = "footerId">
+
+</footer>
+</body>
+</html>
