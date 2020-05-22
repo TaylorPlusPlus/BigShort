@@ -7,7 +7,7 @@ The code provided contains just about everything needed to run this project, how
 If you would like access to the sensitive files required to run this application, reach out to me on github!
 
 # Using This Application
-This application can be accessed by going to [bigshort.org](https:://bigshort.org) 
+This application can be accessed by going to [bigshort.org](https://bigshort.org) 
 
 # Built With
   * Spring MVC/Spring Boot - The web framework used
